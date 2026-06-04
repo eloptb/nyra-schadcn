@@ -1,0 +1,79 @@
+/* ============================================================
+   Nyra UI — Thème Genero Enterprise
+   Version : 1.0.0
+   Usage   : @import url('https://nyra-ui.vercel.app/themes/genero-enterprise.css');
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --background: #f7f7f9;
+  --foreground: #181122;
+  --card: #fdfdfd;
+  --card-foreground: #181122;
+  --popover: #fdfdfd;
+  --popover-foreground: #181122;
+  --primary: #1c5efe;
+  --primary-foreground: #fdfdfd;
+  --secondary: #21e0f4;
+  --secondary-foreground: #181122;
+  --muted: #efeff3;
+  --muted-foreground: #636388;
+  --accent: #cfddff;
+  --accent-foreground: #181122;
+  --destructive: #e60b00;
+  --destructive-foreground: #fdfdfd;
+  --border: #cfddff;
+  --input: #cfddff;
+  --ring: #1c5efe;
+  --sidebar: #fdfdfd;
+  --sidebar-foreground: #181122;
+  --sidebar-primary: #1c5efe;
+  --sidebar-primary-foreground: #fdfdfd;
+  --sidebar-accent: #cfddff;
+  --sidebar-accent-foreground: #181122;
+  --sidebar-border: #cfddff;
+  --sidebar-ring: #1c5efe;
+  --font-sans: 'Noto Sans', ui-sans-serif, sans-serif, system-ui;
+  --radius: 1rem;
+  --shadow-sm:  0 4px 16px 0px hsl(222.65 79.81% 40.78% / 0.25), 0 1px 2px -1px hsl(222.65 79.81% 40.78% / 0.25);
+  --shadow:     0 4px 16px 0px hsl(222.65 79.81% 40.78% / 0.25), 0 1px 2px -1px hsl(222.65 79.81% 40.78% / 0.25);
+  --shadow-md:  0 4px 16px 0px hsl(222.65 79.81% 40.78% / 0.25), 0 2px 4px -1px hsl(222.65 79.81% 40.78% / 0.25);
+  --shadow-lg:  0 4px 16px 0px hsl(222.65 79.81% 40.78% / 0.25), 0 4px 6px -1px hsl(222.65 79.81% 40.78% / 0.25);
+}
+
+.dark {
+  --background: #0d0d10;
+  --foreground: #fdfdfd;
+  --card: #191921;
+  --card-foreground: #fdfdfd;
+  --popover: #191921;
+  --popover-foreground: #fdfdfd;
+  --primary: #1c5efe;
+  --primary-foreground: #fdfdfd;
+  --secondary: #21e0f4;
+  --secondary-foreground: #07050a;
+  --muted: #303041;
+  --muted-foreground: #c8c8d5;
+  --accent: #0d2c79;
+  --accent-foreground: #fafafa;
+  --destructive: #ff3b2f;
+  --destructive-foreground: #fafafa;
+  --border: #474761;
+  --input: #636388;
+  --ring: #1c5efe;
+  --sidebar: #191921;
+  --sidebar-foreground: #fdfdfd;
+  --sidebar-primary: #1c5efe;
+  --sidebar-primary-foreground: #fdfdfd;
+  --sidebar-accent: #0d2c79;
+  --sidebar-accent-foreground: #fdfdfd;
+  --sidebar-border: #474761;
+  --sidebar-ring: #1c5efe;
+  --font-sans: 'Noto Sans', ui-sans-serif, sans-serif, system-ui;
+  --radius: 1rem;
+  --shadow-sm:  0 4px 16px 0px hsl(0 0% 0% / 0.25), 0 1px 2px -1px hsl(0 0% 0% / 0.25);
+  --shadow:     0 4px 16px 0px hsl(0 0% 0% / 0.25), 0 1px 2px -1px hsl(0 0% 0% / 0.25);
+  --shadow-md:  0 4px 16px 0px hsl(0 0% 0% / 0.25), 0 2px 4px -1px hsl(0 0% 0% / 0.25);
+  --shadow-lg:  0 4px 16px 0px hsl(0 0% 0% / 0.25), 0 4px 6px -1px hsl(0 0% 0% / 0.25);
+}

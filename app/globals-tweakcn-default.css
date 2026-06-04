@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================================
+   THÈME PAR DÉFAUT — shadcn/ui (zinc)
+   ============================================================ */
+:root {
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --radius: 0.5rem;
+  --background: #ffffff;
+  --foreground: #09090b;
+  --card: #ffffff;
+  --card-foreground: #09090b;
+  --popover: #ffffff;
+  --popover-foreground: #09090b;
+  --primary: #18181b;
+  --primary-foreground: #fafafa;
+  --secondary: #f4f4f5;
+  --secondary-foreground: #18181b;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --accent: #f4f4f5;
+  --accent-foreground: #18181b;
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: #18181b;
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* ============================================================
+   THÈME NYRA UI — Genero Enterprise
+   Activé par : <html data-theme="nyra-gi">
+   Source : tweakcn.com — Genero Enterprise
+   ============================================================ */
+[data-theme="nyra-gi"] {
+  --background: #f7f7f9;
+  --foreground: #181122;
+  --card: #fdfdfd;
+  --card-foreground: #181122;
+  --popover: #fdfdfd;
+  --popover-foreground: #181122;
+  --primary: #1c5efe;
+  --primary-foreground: #fdfdfd;
+  --secondary: #21e0f4;
+  --secondary-foreground: #181122;
+  --muted: #f5f5f5;
+  --muted-foreground: #737373;
+  --accent: #cfddff;
+  --accent-foreground: #181122;
+  --destructive: #ff3b2f;
+  --destructive-foreground: #fdfdfd;
+  --border: #cfddff;
+  --input: #cfddff;
+  --ring: #1c5efe;
+  --chart-1: #21e0f4;
+  --chart-2: #d00eff;
+  --chart-3: #7a5fff;
+  --chart-4: #ff943c;
+  --chart-5: #04c7be;
+  --sidebar: #051130;
+  --sidebar-foreground: #fdfdfd;
+  --sidebar-primary: #1c5efe;
+  --sidebar-primary-foreground: #fdfdfd;
+  --sidebar-accent: #cfddff;
+  --sidebar-accent-foreground: #051130;
+  --sidebar-border: #0d2c79;
+  --sidebar-ring: #1c5efe;
+  --font-sans: 'Noto Sans', ui-sans-serif, sans-serif, system-ui;
+  --radius: 1rem;
+  --shadow-sm: 0 4px 16px 0px hsl(222.65 79.81% 40.78% / 0.25), 0 1px 2px -1px hsl(222.65 79.81% 40.78% / 0.25);
+  --shadow: 0 4px 16px 0px hsl(222.65 79.81% 40.78% / 0.25), 0 1px 2px -1px hsl(222.65 79.81% 40.78% / 0.25);
+  --shadow-md: 0 4px 16px 0px hsl(222.65 79.81% 40.78% / 0.25), 0 2px 4px -1px hsl(222.65 79.81% 40.78% / 0.25);
+  --shadow-lg: 0 4px 16px 0px hsl(222.65 79.81% 40.78% / 0.25), 0 4px 6px -1px hsl(222.65 79.81% 40.78% / 0.25);
+}
+
+/* ============================================================
+   TAILWIND v4 — Mapping CSS variables → utilitaires Tailwind
+   ============================================================ */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: var(--font-sans);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+}
