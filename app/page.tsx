@@ -584,10 +584,10 @@ export default function App() {
     <div className="flex h-screen overflow-hidden bg-background text-foreground">
 
       {/* ── Sidebar ─────────────────────────────── */}
-      <aside className="w-56 shrink-0 flex flex-col border-r border-border bg-sidebar">
+      <aside className="w-48 shrink-0 flex flex-col border-r border-border bg-sidebar">
         {/* Logo */}
-        <div className="flex items-center gap-2.5 px-5 py-5 border-b border-border">
-          <div className="h-7 w-7 rounded-md bg-primary flex items-center justify-center">
+        <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
+          <div className="h-6 w-6 rounded bg-primary flex items-center justify-center shrink-0">
             <span className="text-primary-foreground text-xs font-bold">G</span>
           </div>
           <div>
@@ -597,34 +597,34 @@ export default function App() {
         </div>
 
         {/* Nav */}
-        <nav className="flex-1 px-3 py-4 space-y-1">
+        <nav className="flex-1 px-2 py-3 space-y-0.5">
           {NAV.map((item) => (
             <button
               key={item.id}
               onClick={() => setPage(item.id)}
-              className={`w-full flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+              className={`w-full flex items-center gap-2.5 rounded-md px-2.5 py-1.5 text-sm font-medium transition-colors ${
                 page === item.id
-                  ? "bg-sidebar-accent text-sidebar-accent-foreground"
+                  ? "bg-sidebar-primary text-sidebar-primary-foreground"
                   : "text-sidebar-foreground/70 hover:bg-sidebar-accent/50 hover:text-sidebar-foreground"
               }`}
             >
-              <item.icon size={16} />
+              <item.icon size={15} />
               {item.label}
             </button>
           ))}
         </nav>
 
         {/* User + dark toggle */}
-        <div className="border-t border-border px-3 py-4 space-y-2">
+        <div className="border-t border-border px-2 py-3 space-y-0.5">
           <button
             onClick={() => setDark(!dark)}
-            className="w-full flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-sidebar-foreground/70 hover:bg-sidebar-accent/50 hover:text-sidebar-foreground transition-colors"
+            className="w-full flex items-center gap-2.5 rounded-md px-2.5 py-1.5 text-sm text-sidebar-foreground/70 hover:bg-sidebar-accent/50 hover:text-sidebar-foreground transition-colors"
           >
-            {dark ? <Sun size={16} /> : <Moon size={16} />}
+            {dark ? <Sun size={15} /> : <Moon size={15} />}
             {dark ? "Mode clair" : "Mode sombre"}
           </button>
-          <div className="flex items-center gap-3 px-3 py-2">
-            <div className="h-7 w-7 rounded-full bg-sidebar-primary flex items-center justify-center text-sidebar-primary-foreground text-xs font-semibold shrink-0">
+          <div className="flex items-center gap-2.5 px-2.5 py-1.5">
+            <div className="h-6 w-6 rounded-full bg-sidebar-primary flex items-center justify-center text-sidebar-primary-foreground text-xs font-semibold shrink-0">
               EP
             </div>
             <div className="min-w-0">
@@ -638,10 +638,10 @@ export default function App() {
       {/* ── Main ────────────────────────────────── */}
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Top bar */}
-        <header className="h-14 shrink-0 border-b border-border bg-card flex items-center justify-between px-6">
+        <header className="h-11 shrink-0 border-b border-border bg-card flex items-center justify-between px-5">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <span>Genero Enterprise</span>
-            <ChevronRight size={14} />
+            <ChevronRight size={13} />
             <span className="text-foreground font-medium">{PAGE_TITLES[page]}</span>
           </div>
           <div className="flex items-center gap-2">
@@ -651,7 +651,7 @@ export default function App() {
         </header>
 
         {/* Content */}
-        <main className="flex-1 overflow-y-auto p-6">
+        <main className="flex-1 overflow-y-auto p-5">
           {page === "dashboard" && <DashboardPage />}
           {page === "profile"   && <ProfilePage />}
           {page === "planning"  && <PlanningPage />}
